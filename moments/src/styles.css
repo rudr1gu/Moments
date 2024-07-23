@@ -15,3 +15,45 @@ a{
 a:hover{
     color: #dec129;
 }
+
+/* FORM */
+
+form {
+  width: 450PX;
+  margin: 0 auto;   
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: .6em;
+    color:#777;
+    font-size: .8em;
+}
+
+input[type="submit"]{
+    background-color: #efefef;
+    border: 2px solid transparent;
+    padding: .6em 1em;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.1em;
+    transition: .4s;
+}
+
+input[type="submit"]:hover{
+    background-color: transparent;
+    color: #dec129;
+    border: 2px solid #dec129;
+}
