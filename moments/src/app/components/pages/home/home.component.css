@@ -1,0 +1,51 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container h1 {
+  margin-bottom: .5rem;
+}
+
+.moments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.moment{
+    width: 32%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.moment img {
+  width: 100%;
+  margin-bottom: 1em;
+  height: auto;
+}
+
+.moment h3, .moment p {
+    margin-bottom: 1em;
+}
+
+.moment .date {
+    font-size: .7em;
+    font-style: italic;
+}
+
+a {
+    color: #dec129;
+    padding: .3em;
+    border: 1px solid #dec129;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+a:hover {
+    background-color: #f0e6a8;
+}
