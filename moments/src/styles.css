@@ -65,3 +65,45 @@ input[type="submit"]:hover{
     border-left: 3px solid red;
     padding-left: .2em;
 }
+
+/* Buttons */
+
+.edit-btn, .remove-btn {
+    border: #efefef;
+    background-color: white;
+    border: 2px solid transparent;
+    padding: .6em 1em;
+    cursor: pointer;
+    margin: 0 .5em;
+    font-weight: bolder;
+    font-size: 1em;
+    transition: .4s;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+button fa-icon, a fa-icon {
+    margin-right: .3em;
+}
+
+.edit-btn, .edit-btn path {
+    border-color: #007bff;
+    color: #007bff;
+    transition: .9s;
+}
+
+.edit-btn:hover, .edit-btn:hover path {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.remove-btn, .remove-btn path {
+    border-color: #dc3545;
+    color: #dc3545;
+    transition: .9s;
+}
+
+.remove-btn:hover, .remove-btn:hover path {
+    background-color: #dc3545;
+    color: #fff;
+}

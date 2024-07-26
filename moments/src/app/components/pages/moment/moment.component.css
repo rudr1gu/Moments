@@ -1,0 +1,42 @@
+.moment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 500px;
+    margin-bottom: 0 auto 1em;
+}
+
+.about-moment, .actions{
+    padding: 1.2em 1.2em 1.2em 1em ;
+    border-bottom: 1px solid #dec129;
+    width: 100%;
+}
+
+.actions {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comments {
+    margin: 0 auto 1em;
+    padding: 1.5em 0;
+}
+
+.about-moment h3,
+.actions h3,
+.comments h3 {
+    margin-bottom: 1em;
+}

@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { MomentService } from 'src/app/services/moment.service';
 import { Moment } from '../../../Moments';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
+import { faEdit, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-moment',
@@ -10,7 +13,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./moment.component.css']
 })
 export class MomentComponent implements OnInit {
+  //moment
   moment?: Moment;
+  baseApiUrl = environment.baseApiUrl;
+
+  //icons
+  faEdit = faEdit;
+  faTimes = faTimes;
 
 
 
@@ -25,6 +34,12 @@ export class MomentComponent implements OnInit {
     this.momentService
     .getMoment(id)
     .subscribe((item) => (this.moment = item.data));
+  }
+
+  deleteMoment(id: number): void {
+    this.momentService.deleteMoment(id).subscribe(() => {
+      alert('Moment deleted successfully');
+    });
   }
 
 }
