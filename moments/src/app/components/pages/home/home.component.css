@@ -49,3 +49,30 @@ a {
 a:hover {
     background-color: #f0e6a8;
 }
+
+.search-container {
+    /* display: flex;
+    justify-content: center; */
+    margin: 2em 0em;
+    width: 100%;
+
+}
+
+.search-container form {
+   position: relative;
+    width: 30%;
+}
+
+.search-container fa-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: .5em 2em .5em 2em;
+    border: 1px solid #dec129;
+    border-radius: 10px;
+    text-align: center;
+}
