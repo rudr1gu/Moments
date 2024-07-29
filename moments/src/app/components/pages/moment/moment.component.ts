@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 import { faEdit, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
   selector: 'app-moment',
@@ -25,7 +26,9 @@ export class MomentComponent implements OnInit {
 
   constructor(
     private momentService: MomentService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private messagesService: MessagesService,
+    private router: Router){ }
 
   ngOnInit(): void {
     //id que esta na url
@@ -36,10 +39,11 @@ export class MomentComponent implements OnInit {
     .subscribe((item) => (this.moment = item.data));
   }
 
-  deleteMoment(id: number): void {
-    this.momentService.deleteMoment(id).subscribe(() => {
-      alert('Moment deleted successfully');
-    });
+  async removeHandler(id: number){
+      await this.momentService.removeMoment(id).subscribe();
+      this.messagesService.add('Momento removido com sucesso');
+      this.router.navigate(['/']);
   }
+
 
 }
