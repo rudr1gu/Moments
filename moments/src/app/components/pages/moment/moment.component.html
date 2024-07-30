@@ -11,7 +11,33 @@
         <button class="remove-btn" (click)="removeHandler(moment.id!)">Excluir <fa-icon [icon]="faTimes"></fa-icon></button>
     </div>
     <!-- Comentários -->
-     <div class="comments">
-        <h3>Comentários (0):</h3>
-     </div>
+    <div class="comments">
+        <h3>Comentários ( {{moment.comments!.length}} ):</h3>
+        <div *ngIf="moment.comments!.length > 0; else noComments">
+            <!-- <app-comment-form [momentId]="moment.id"></app-comment-form>
+            <app-comment *ngFor="let comment of moment.comments" [comment]="comment"></app-comment> -->
+            <div class="comment-container" *ngFor="let comment of moment.comments">
+                <p class="comment"> {{comment.text}} </p>
+                <p class="author"><span>por: </span> {{comment.username}} </p>
+            </div>
+        </div>
+        
+        <ng-template #noComments>
+            <p>Sem comentários</p>
+        </ng-template>
+    </div>
+    <div class="comment-form">
+        <h3>Deixe um comentário</h3>
+        <form>
+            <div class="form-group">
+                <label for="text">Comentário</label>
+                <textarea placeholder="Comentário" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="username">Nome</label>
+                <input type="text" placeholder="Seu nome" required>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 </div>
