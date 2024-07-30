@@ -7,7 +7,7 @@
     </div>
     <div class="actions">
         <!-- <a routerLink="/moments" class="edit-btn">Voltar</a> -->
-        <a routerLink="/moments/{{moment.id}}/edit" class="edit-btn">Editar <fa-icon [icon]="faEdit"></fa-icon></a>
+        <a routerLink="/moments/edit/{{moment.id}}" class="edit-btn">Editar <fa-icon [icon]="faEdit"></fa-icon></a>
         <button class="remove-btn" (click)="removeHandler(moment.id!)">Excluir <fa-icon [icon]="faTimes"></fa-icon></button>
     </div>
     <!-- Comentários -->
